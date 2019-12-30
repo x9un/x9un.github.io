@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        uploads-lab - 9un&#39;s Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 当一个肥宅真好 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>9un</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archive">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-01-客户端javascript检测"><span class="toc-text">pass-01 客户端javascript检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-02-MIME"><span class="toc-text">pass-02 MIME</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-03-黑名单绕过"><span class="toc-text">pass-03 黑名单绕过</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-04-htaccess"><span class="toc-text">pass-04 .htaccess</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-05-大小写绕过"><span class="toc-text">pass-05 大小写绕过</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-06-空格过滤"><span class="toc-text">pass-06 空格过滤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-07-后缀加"><span class="toc-text">pass-07 后缀加.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-08-DATA"><span class="toc-text">pass-08 ::$DATA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-09"><span class="toc-text">pass-09</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-10"><span class="toc-text">pass-10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-11-00截断"><span class="toc-text">pass-11 %00截断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-12-0x00"><span class="toc-text">pass-12 0x00</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-13"><span class="toc-text">pass-13</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-14"><span class="toc-text">pass-14</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-15"><span class="toc-text">pass-15</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-16"><span class="toc-text">pass-16</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-17"><span class="toc-text">pass-17</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-18"><span class="toc-text">pass-18</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-19"><span class="toc-text">pass-19</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-20"><span class="toc-text">pass-20</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 当一个肥宅真好 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        uploads-lab
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-12-30 18:31:19</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#PHP" title="PHP">PHP</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#文件上传" title="文件上传">文件上传</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#wp" title="wp">wp</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>qwqqqqqq我觉得有空得再整理一下 </p>
+<h2 id="pass-01-客户端javascript检测"><a href="#pass-01-客户端javascript检测" class="headerlink" title="pass-01 客户端javascript检测"></a>pass-01 客户端javascript检测</h2><p>chrome在elements中不能对javascript函数进行修改，所以在console中重写一遍在checkFile()判断条件中中加上.php</p>
+<h2 id="pass-02-MIME"><a href="#pass-02-MIME" class="headerlink" title="pass-02 MIME"></a>pass-02 MIME</h2><p>上传php文件，改包为允许后缀名<br>payloads:Content-Type: image/jpeg</p>
+<h2 id="pass-03-黑名单绕过"><a href="#pass-03-黑名单绕过" class="headerlink" title="pass-03 黑名单绕过"></a>pass-03 黑名单绕过</h2><p>上传php5后缀文件<br>黑名单绕过可以使用php的其他扩展名：pht，phpt，phtml，php3，php4，php5，php6等</p>
+<h2 id="pass-04-htaccess"><a href="#pass-04-htaccess" class="headerlink" title="pass-04 .htaccess"></a>pass-04 .htaccess</h2><p>上传.htaccess使jpg文件作为php文件解析<br>payloads:<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;FilesMatch ".(jpg)$"&gt;</span></span><br><span class="line"><span class="attribute"><span class="nomarkup">SetHandler</span></span> application/x-httpd-php</span><br><span class="line"><span class="section">&lt;/FilesMatch&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="pass-05-大小写绕过"><a href="#pass-05-大小写绕过" class="headerlink" title="pass-05 大小写绕过"></a>pass-05 大小写绕过</h2><p>源码和04作了比较，05少了大小写转换，于是用Php后缀</p>
+<h2 id="pass-06-空格过滤"><a href="#pass-06-空格过滤" class="headerlink" title="pass-06 空格过滤"></a>pass-06 空格过滤</h2><p>文件后缀加入空格，在windows环境下，xx.jpg[空格] 或xx.jpg.这两类文件都是不允许存在的，若这样命名，windows会默认除去空格或点<br>传入正常php文件后，改包后缀名+空格</p>
+<h2 id="pass-07-后缀加"><a href="#pass-07-后缀加" class="headerlink" title="pass-07 后缀加."></a>pass-07 后缀加.</h2><p>没有deldot()，加点上传</p>
+<h2 id="pass-08-DATA"><a href="#pass-08-DATA" class="headerlink" title="pass-08 ::$DATA"></a>pass-08 ::$DATA</h2><p>没有str_ireplace()，加::$DATA</p>
+<h2 id="pass-09"><a href="#pass-09" class="headerlink" title="pass-09"></a>pass-09</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">img_path = UPLOAD_PATH.<span class="string">'/'</span>.<span class="variable">$file_name</span>;</span></span><br></pre></td></tr></table></figure>
+<p>路径是经过处理的$file_name，根据函数执行顺序构造1.php. .</p>
+<h2 id="pass-10"><a href="#pass-10" class="headerlink" title="pass-10"></a>pass-10</h2><p>以1.php为例，上传后会文件名变为1.造成上传失败<br>可以改为1.php.php</p>
+<h2 id="pass-11-00截断"><a href="#pass-11-00截断" class="headerlink" title="pass-11 %00截断"></a>pass-11 %00截断</h2><p>%00，0x00，/00本质相同  </p>
+<blockquote>
+<p>截断原理:在url中%00表示ascll码中的0，而ascii中0作为特殊字符保留，表示字符串结束，所以当url中出现%00时就会认为读取已结束  </p>
+</blockquote>
+<p>上传路径改为1.php%00，上传文件改为.jpg后缀<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">save_path=../upload/<span class="number">1.</span>Php%<span class="number">00</span> HTTP/<span class="number">1.1</span></span><br></pre></td></tr></table></figure></p>
+<p>环境：php版本要小于5.3.4，5.3.4及以上已经修复该问题<br>magic_quotes_gpc需要为OFF状态</p>
+<h2 id="pass-12-0x00"><a href="#pass-12-0x00" class="headerlink" title="pass-12 0x00"></a>pass-12 0x00</h2><p>比较与11的代码，发现由GET转为POST<br>在POST中%00不会被url解码，在文件名后burpsuite添加二进制00  </p>
+<h2 id="pass-13"><a href="#pass-13" class="headerlink" title="pass-13"></a>pass-13</h2><ol>
+<li>源代码是检测前两个字节，winhex直接在图片后插入一句话木马  </li>
+<li>cmd  <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy <span class="number">1</span>.jpg/<span class="selector-tag">b</span> + test.php/<span class="selector-tag">a</span> <span class="number">2</span><span class="selector-class">.jpg</span> <span class="comment">//1.jpg与test.php合并后生成2.jpg</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>参数 /b 指定以二进制格式复制、合并文件；用于图像类 / 声音类文件<br>参数 /a 指定以 ASCII 格式复制、合并文件。用于 txt 等文档类文件<br>.png .gif同理  </p>
+<h2 id="pass-14"><a href="#pass-14" class="headerlink" title="pass-14"></a>pass-14</h2><p>查了下getimagesize()，getimagesize()只检查了文件头，按照13的方法就可以通过<br>或者直接在代码的hex里加上一个图片的文件头就可以绕过检查</p>
+<h2 id="pass-15"><a href="#pass-15" class="headerlink" title="pass-15"></a>pass-15</h2><blockquote>
+<p>函数定义：exif_imagetype() 读取一个图像的第一个字节并检查其签名。<br>按13方法处理，头部带有图像文件相同信息就可绕过</p>
+</blockquote>
+<h2 id="pass-16"><a href="#pass-16" class="headerlink" title="pass-16"></a>pass-16</h2><p>上传jpg文件，再将渲染过后的jpg文件与源jpg文件hex进行比较。在不变的部分插入php代码</p>
+<h2 id="pass-17"><a href="#pass-17" class="headerlink" title="pass-17"></a>pass-17</h2><p>移动文件路径，判断后缀之后再删除，存在条件竞争<br>利用存放临时文件的时间即可访问上传文件<br>利用burp多线程发包，之后不断访问</p>
+<h2 id="pass-18"><a href="#pass-18" class="headerlink" title="pass-18"></a>pass-18</h2><blockquote>
+<p>apache解析漏洞:Apache服务器在解析多后缀文件名的文件时，会从后往前辨别后缀，一直辨别到可以解析的后缀<br>白名单中的7z后缀并不被apache解析，所以上传1.php.7z</p>
+</blockquote>
+<h2 id="pass-19"><a href="#pass-19" class="headerlink" title="pass-19"></a>pass-19</h2><p>利用apache解析漏洞，保存名称改为1.php.7z</p>
+<h2 id="pass-20"><a href="#pass-20" class="headerlink" title="pass-20"></a>pass-20</h2><p>$file[0]=1.php/<br>$file[2]=jpg<br>此时$file[count($file) - 1]=$file[1]=””为空<br>所以$file_name=1.php/.<br>move_uploaded_file()会递归删除文件名最后的/.导致绕过了后缀名检测。<br><a href="http://wonderkun.cc/index.html/?p=626" target="_blank" rel="noopener">/.原理链接</a></p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        <li>
+            <a target="_blank" href="https://twitter.com/9un20">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-twitter"></i>
+                            </span>
+            </a>
+        </li>
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/x9un">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+        <span><a href="https://space.bilibili.com/23118346">9un&#39;s bilibili</a></span>
+        <span>/</span>
+        
+    </p>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script type="text/javascript">
+       (function() {
+           if (typeof LivereTower === 'function') { return; }
+
+           var j, d = document.getElementById('lv-container');
+
+           d.setAttribute('data-id','city');
+           d.setAttribute('data-uid' , 'MTAyMC80ODAwNy8yNDUwNA==');
+
+           j = document.createElement('script');
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           d.appendChild(j);
+       })();
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+</html>

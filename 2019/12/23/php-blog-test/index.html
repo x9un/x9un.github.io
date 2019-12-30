@@ -89,7 +89,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#主要思路"><span class="toc-text">主要思路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安全相关"><span class="toc-text">安全相关</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#web2"><span class="toc-text">web2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#主要思路"><span class="toc-text">主要思路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安全相关"><span class="toc-text">安全相关</span></a></li></ol>
 </div>
     
 </div>
@@ -131,9 +131,6 @@
         <a class="tag" href="/tags/#PHP" title="PHP">PHP</a>
         <span>/</span>
         
-        <a class="tag" href="/tags/#excercise" title="excercise">excercise</a>
-        <span>/</span>
-        
         
         </span>
         <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
@@ -142,15 +139,14 @@
     </div>
     <div class="post-content ">
         <p>QAQ u1s1 花了好长时间(果然是个菜鸡)而且好多地方都没完善<br>ctrlc ctrlv一波带走<br>以后继续完善！(咕咕咕)</p>
-<p>主要有以下几个功能</p>
+<h1 id="web2"><a href="#web2" class="headerlink" title="web2"></a>web2</h1><p>主要有以下几个功能</p>
 <ol>
 <li>用户登录登出</li>
 <li>用户注册</li>
 <li>用户留言</li>
 <li>用户名与用户密码的更新</li>
 </ol>
-<p>对，功能就是这么少….</p>
-<p>贴一份链接好了：<a href="https://github.com/x9un/blog_test" target="_blank" rel="noopener">a php blog</a></p>
+<p>链接：<a href="https://github.com/x9un/blog_test" target="_blank" rel="noopener">web2</a></p>
 <h1 id="主要思路"><a href="#主要思路" class="headerlink" title="主要思路"></a>主要思路</h1><ol>
 <li>先建个数据库，2个表分别用来存储用户信息和留言板信息</li>
 <li>建立文件用以链接数据库</li>
@@ -158,11 +154,17 @@
 <li>登录后自动调转至user界面，可进行登出，留言与更新操作</li>
 </ol>
 <h1 id="安全相关"><a href="#安全相关" class="headerlink" title="安全相关"></a>安全相关</h1><ol start="0">
-<li>htmlspecials()该加的都加了（也许？</li>
+<li>htmlspecials()</li>
 <li>预防sql注入：使用PDO语句(以login.php为例)<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$dsn=<span class="string">"mysql:host=$mysrv;dbname=$mydb;"</span>;</span><br><span class="line">$pdo=<span class="keyword">new</span> PDO($dsn,$myuser,$mypwd);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>($username)&amp;&amp;<span class="keyword">isset</span>($password))</span><br><span class="line">&#123;<span class="comment">//如果用户名和密码都不为空</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$sql = $pdo-&gt;prepare(<span class="string">"select * from members where username = ? and password = ?"</span>);</span><br><span class="line">$sql-&gt;execute(<span class="keyword">array</span>($username,md5($password)));</span><br><span class="line"><span class="keyword">if</span> ($sql-&gt;rowCount()) &#123;</span><br><span class="line">        $_SESSION = $sql-&gt;fetch(PDO::FETCH_ASSOC);</span><br><span class="line">        header(<span class="string">"Location:user.php"</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>PDO原理：在传入参数之前已经构建好了语法树，所以后期语法结构并不会被改变，传入的参数只会被当作参数看待</p>
+<ol start="2">
+<li>对密码进行了password_hash处理<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$regpwd_hash=password_hash($regpwd,PASSWORD_BCRYPT);</span><br><span class="line"></span><br><span class="line">	$regsql=$pdo-&gt;prepare(<span class="string">"insert into members (username,password) values (?,?)"</span>);</span><br><span class="line">	$regsql-&gt;execute(<span class="keyword">array</span>($reguser,$regpwd_hash));</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在更新密码与注册时使用，而登录时则用password_verify()来验证密码  </p>
+<p>若进行哈希算法如 MD5 或者 SHA ，执行速度非常快，这并不是我们想要的，我们需要对密码进行加盐处理，避免两个同样的密码产生相同的哈希值，新版PHP中自带了这一功能的函数<br>但是密码哈希并不是密码加密。哈希是将目标文本转换成具有相同长度的、不可逆的杂凑字符串，而加密是将目标文本转换成具有不同长度的、可逆的密文。他们之间最大的区别是可逆性，在储存密码时，我们需要不可逆的属性</p>
 
         
         <br />
