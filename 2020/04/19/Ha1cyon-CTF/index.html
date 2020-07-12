@@ -1,144 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
+
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Helden sterben nicht!">
-    <meta name="keyword"  content="">
-    <link rel="shortcut icon" href="/img/favicon.ico">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    Ha1cyon_CTF | 某不知名母猪养殖用户
+  </title>
+  <meta name="description" content="Helden sterben nicht!">
+  
+  <meta name="keywords" content="
+  ctf
+  ">
+  
+  <meta name="author" content="/357">
 
-    <title>
-        
-        Ha1cyon_CTF - 全部曹飞
-        
-    </title>
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/aircloud.css">
-    <link rel="stylesheet" href="/css/gitment.css">
-    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
-    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
-    <!-- ga & ba script hoook -->
-    <script></script>
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+  
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
 </head>
 
-<body>
+<body id="replica-app">
 
-<div class="site-nav-toggle" id="site-nav-toggle">
-    <button>
-        <span class="btn-bar"></span>
-        <span class="btn-bar"></span>
-        <span class="btn-bar"></span>
-    </button>
-</div>
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
 
-<div class="index-about">
-    <i> null </i>
-</div>
-
-<div class="index-container">
-    
-    <div class="index-left">
-        
-<div class="nav" id="nav">
-    <div class="avatar-name">
-        <div class="avatar ">
-            <img src="/img/avatar.jpg" />
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">This website</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
         </div>
-        <div class="name">
-            <i>济 南 屁 王</i>
-        </div>
-    </div>
-    <div class="contents" id="nav-content">
-        <ul>
-            <li >
-                <a href="/">
-                    <i class="iconfont icon-shouye1"></i>
-                    <span>主页</span>
-                </a>
-            </li>
-            <li >
-                <a href="/tags">
-                    <i class="iconfont icon-biaoqian1"></i>
-                    <span>标签</span>
-                </a>
-            </li>
-            <li >
-                <a href="/archive">
-                    <i class="iconfont icon-guidang2"></i>
-                    <span>存档</span>
-                </a>
-            </li>
-            <li >
-                <a href="/about/">
-                    <i class="iconfont icon-guanyu2"></i>
-                    <span>关于</span>
-                </a>
-            </li>
-            
-            <li>
-                <a id="search">
-                    <i class="iconfont icon-sousuo1"></i>
-                    <span>搜索</span>
-                </a>
-            </li>
-            
-        </ul>
-    </div>
-    
-        <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#web"><span class="toc-text">web</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#查源码"><span class="toc-text">查源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RealEzPHP"><span class="toc-text">RealEzPHP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ezlogin"><span class="toc-text">ezlogin</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前导知识"><span class="toc-text">前导知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目"><span class="toc-text">题目</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ezinclude"><span class="toc-text">ezinclude</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#验证🐎"><span class="toc-text">验证🐎</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#misc"><span class="toc-text">misc</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#抽象带师"><span class="toc-text">抽象带师</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#crypto"><span class="toc-text">crypto</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#这是什么觅🐎"><span class="toc-text">这是什么觅🐎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Classical-Cipher"><span class="toc-text">Classical Cipher</span></a></li></ol></li></ol>
-</div>
-    
-</div>
+      </div>
 
-
-<div class="search-field" id="search-field">
-    <div class="search-container">
-        <div class="search-input">
-            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
-            <input id="search-input"/>
-            <span id="begin-search">搜索</span>
-        </div>
-        <div class="search-result-container" id="search-result-container">
-
-        </div>
-    </div>
-</div>
-
-        <div class="index-about-mobile">
-            <i> null </i>
-        </div>
-    </div>
-    
-    <div class="index-middle">
-        <!-- Main Content -->
+      <ul class="navbar-nav float-left">
         
-
-
-<div class="post-container">
-    <div class="post-title">
-        Ha1cyon_CTF
-    </div>
-
-    <div class="post-meta">
-        <span class="attr">发布于：<span>2020-04-19 18:13:05</span></span>
-        
-        <span class="attr">标签：/
-        
-        <a class="tag" href="/tags/#ctf" title="ctf">ctf</a>
-        <span>/</span>
+        <li><a href="/archive">Archives</a></li>
         
         
-        </span>
-        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
-</span>
-</span>
+        <li><a href="/categories">Categories</a></li>
+        
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        
+        <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li>
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="https://octodex.github.com/images/baracktocat.jpg"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
     </div>
-    <div class="post-content ">
-        <h1 id="web"><a href="#web" class="headerlink" title="web"></a>web</h1><h2 id="查源码"><a href="#查源码" class="headerlink" title="查源码"></a>查源码</h2><p>如题  </p>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/archive" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/archive"
+           class="header-toolbar-right"> 5 </a>
+      </li>
+      <li>
+        <a href="/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/tags"
+           class="header-toolbar-right"> 2 </a>
+      </li>
+      <li>
+        <a href="/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/categories"
+           class="header-toolbar-right"> 0 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/">某不知名母猪养殖用户</a>
+      
+      
+    </h2>
+  </div>
+
+  <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div>
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    /357
+
+    <span class="post-date float-right" title="{{moment(1587291185000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      <i class="fa fa-pencil-square-o"></i>
+      {{moment(1587291185000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>Ha1cyon_CTF</h1>
+    <h1 id="web"><a href="#web" class="headerlink" title="web"></a>web</h1><h2 id="查源码"><a href="#查源码" class="headerlink" title="查源码"></a>查源码</h2><p>如题  </p>
 <h2 id="RealEzPHP"><a href="#RealEzPHP" class="headerlink" title="RealEzPHP"></a>RealEzPHP</h2><p>源码<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">#error_reporting(0);</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloPhp</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> $a;</span><br><span class="line">    <span class="keyword">public</span> $b;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;a = <span class="string">"Y-m-d h:i:s"</span>;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;b = <span class="string">"date"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__destruct</span><span class="params">()</span></span>&#123;</span><br><span class="line">        $a = <span class="keyword">$this</span>-&gt;a;</span><br><span class="line">        $b = <span class="keyword">$this</span>-&gt;b;</span><br><span class="line">        <span class="keyword">echo</span> $b($a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">$c = <span class="keyword">new</span> HelloPhp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>($_GET[<span class="string">'source'</span>]))</span><br><span class="line">&#123;</span><br><span class="line">    highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line">    <span class="keyword">die</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@$ppp = unserialize($_GET[<span class="string">"data"</span>]);</span><br></pre></td></tr></table></figure></p>
 <p>反序列化<br>$b($a)=&gt;$b是个函数名<br>flag在phpinfo里<br>不过s:0:””;是不行的<br><img src="01.png" alt=""><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">O</span><span class="selector-pseudo">:8</span><span class="selector-pseudo">:"HelloPhp"</span><span class="selector-pseudo">:2</span>:&#123;<span class="attribute">s</span>:<span class="number">1</span>:<span class="string">"a"</span>;<span class="attribute">s</span>:<span class="number">2</span>:<span class="string">"-1"</span>;<span class="attribute">s</span>:<span class="number">1</span>:<span class="string">"b"</span>;<span class="attribute">s</span>:<span class="number">7</span>:<span class="string">"phpinfo"</span>;&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="ezlogin"><a href="#ezlogin" class="headerlink" title="ezlogin"></a>ezlogin</h2><h3 id="前导知识"><a href="#前导知识" class="headerlink" title="前导知识"></a>前导知识</h3><p>抓包信息发现xml请求=&gt;1.xxe 2.xpath盲注<br><a href="https://www.tr0y.wang/2019/05/11/XPath%E6%B3%A8%E5%85%A5%E6%8C%87%E5%8C%97/" target="_blank" rel="noopener">XPath注入指北</a><br><a href="https://www.cnblogs.com/backlion/p/8554749.html" target="_blank" rel="noopener">xpath注入详解</a><br><img src="03.png" alt=""><br>查询语句:<br>$query = “/root/users/user[username/text()=’”.$name.”‘ and password/text()=’”.$pwd.”‘]”;  </p>
@@ -192,122 +192,41 @@
 <h2 id="Classical-Cipher"><a href="#Classical-Cipher" class="headerlink" title="Classical Cipher"></a>Classical Cipher</h2><p>题目<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">压缩包密码：gsv<span class="emphasis">_pvb_</span>rh_zgyzhs</span><br><span class="line"></span><br><span class="line">对应明文：   <span class="strong">***_key_*</span><span class="strong">*_***</span><span class="emphasis">***</span></span><br></pre></td></tr></table></figure></p>
 <p>已知部分明文和全部密文求全部明文<br>‘p’-‘a’+’k’-‘a’=25(对应关系)<br><img src="Ha1cyon-CTF/02.png" alt=""><br>猪圈密码+非斯的象形文字=&gt;<br>原来猪圈密码是变形版的  </p>
 
-        
-        <br />
-        <div id="comment-container">
-        </div>
-        <div id="disqus_thread"></div>
-
-        <div id="lv-container">
-        </div>
-
-    </div>
-</div>
-
-    </div>
+  </article>
 </div>
 
 
-<footer class="footer">
-    <ul class="list-inline text-center">
-        
-        
+    
 
-        
 
-        
 
-        
-        <li>
-            <a target="_blank"  href="https://github.com/x9un">
-                            <span class="fa-stack fa-lg">
-                                <i class="iconfont icon-github"></i>
-                            </span>
-            </a>
-        </li>
-        
 
-        
+</div>
 
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://x9un.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2019 /357</li>
+      <li><a href="https://x9un.github.io">Home</a></li>
+      
     </ul>
+    <div class="footer-theme-info">
+      Theme <a href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a href="//github.com/sabrinaluo">Hiitea</a> ❤ Powered by Hexo
+    </div>
+    </div>
     
-    <p>
-        <span>/</span>
-        
-        <span><a href="https://www.scizapomi.top/">m140</a></span>
-        <span>/</span>
-        
-        <span><a href="http://0727.site/">0x4qe</a></span>
-        <span>/</span>
-        
-        <span><a href="https://www.xi4oyu.top/">xi4oyu</a></span>
-        <span>/</span>
-        
-        <span><a href="http://r3n0.top/">r3n0</a></span>
-        <span>/</span>
-        
-        <span><a href="https://altonhe.github.io/">trotsky</a></span>
-        <span>/</span>
-        
-        <span><a href="https://hikawa.ml/">4k1Ra</a></span>
-        <span>/</span>
-        
-        <span><a href="https://l1near.top/">l1near</a></span>
-        <span>/</span>
-        
-        <span><a href="http://47.97.221.205/">r1nlang</a></span>
-        <span>/</span>
-        
-        <span><a href="https://space.bilibili.com/23118346">bilibili</a></span>
-        <span>/</span>
-        
-    </p>
-    
-    <p>
-        <span id="busuanzi_container_site_pv">
-            <span id="busuanzi_value_site_pv"></span>PV
-        </span>
-        <span id="busuanzi_container_site_uv">
-            <span id="busuanzi_value_site_uv"></span>UV
-        </span>
-        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
-</footer>
+  </footer>
+</div>
 
 
 
+
+<script src="/js/main.js"></script>
 
 </body>
-
-<script>
-    // We expose some of the variables needed by the front end
-    window.hexo_search_path = "search.json"
-    window.hexo_root = "/"
-    window.isPost = true
-</script>
-<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-    <script type="text/javascript">
-       (function() {
-           if (typeof LivereTower === 'function') { return; }
-
-           var j, d = document.getElementById('lv-container');
-
-           d.setAttribute('data-id','city');
-           d.setAttribute('data-uid' , 'MTAyMC80ODAwNy8yNDUwNA==');
-
-           j = document.createElement('script');
-           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-           j.async = true;
-
-           d.appendChild(j);
-       })();
-    </script>
-    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-    </div>
-
 </html>
