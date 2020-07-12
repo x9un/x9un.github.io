@@ -137,11 +137,11 @@
     <li class="selected">
       <a href="/">Overview</a></li>
     <li class="">
-      <a href="/archive">Posts <span class="counter">6</span></a>
+      <a href="/archive">Posts <span class="counter">7</span></a>
     </li>
     <li class="">
       <a href="/categories">Categories <span
-                class="counter">0</span></a></li>
+                class="counter">1</span></a></li>
     <li class="">
       <a href="/tags">Tags <span class="counter">2</span></a></li>
   </ul>
@@ -150,6 +150,27 @@
     <div class="body-secondary">
       <p class="right-title">Recent post</p>
       <ul class="recent-post clearfix">
+        
+        <li class="recent-post-item">
+          <div class="clearfix">
+            <h5 class="post-title text-ellipsis">
+              <i class="fa fa-bars"></i>
+              <a href="/2020/07/12/buuoj-web01/">buuoj-web01</a>
+            </h5>
+            <p class="post-description text-ellipsis desktop-only">
+               buuoj-wp-web01 
+   [HFCTF2020]EasyLogin    注释中写了路
+            </p>
+            <p class="post-info desktop-only">
+              <span>
+                
+                  <a class="category-link" href="/categories/practice/"><i class="fa fa-folder-open"></i> practice</a>
+                
+              </span>
+              <span><i class="fa fa-tag"></i> 1 </span>
+            </p>
+          </div>
+        </li>
         
         <li class="recent-post-item">
           <div class="clearfix">
@@ -258,27 +279,6 @@
           </div>
         </li>
         
-        <li class="recent-post-item">
-          <div class="clearfix">
-            <h5 class="post-title text-ellipsis">
-              <i class="fa fa-bars"></i>
-              <a href="/2020/01/25/hgame2020week1-wp/">hgame2020week1_wp</a>
-            </h5>
-            <p class="post-description text-ellipsis desktop-only">
-               感谢出题人的耐心解答… = =可惜大二了才刚刚开始…. py出题人虽然可耻但有用(X 
-   we
-            </p>
-            <p class="post-info desktop-only">
-              <span>
-                
-                  <i class="fa fa-folder-open"></i> Uncategorized
-                
-              </span>
-              <span><i class="fa fa-tag"></i> 1 </span>
-            </p>
-          </div>
-        </li>
-        
       </ul>
       <div class="calendar-container" id="calendar">
   <div class="calendar">
@@ -366,7 +366,7 @@
 
 
 <script>
-  var posts = [{"date":"2020-01-25","title":"hgame2020week1_wp","url":"https://x9un.github.io/2020/01/25/hgame2020week1-wp/"},{"date":"2020-02-14","title":"hgame2020week2_wp","url":"https://x9un.github.io/2020/02/14/hgame2020week2-wp/"},{"date":"2020-02-14","title":"hgame2020week3_wp","url":"https://x9un.github.io/2020/02/14/hgame2020week3-wp/"},{"date":"2020-02-18","title":"hgame2020week4_wp","url":"https://x9un.github.io/2020/02/18/hgame2020week4-wp/"},{"date":"2020-04-19","title":"Ha1cyon_CTF","url":"https://x9un.github.io/2020/04/19/Ha1cyon-CTF/"},{"date":"2020-07-12","title":"links","url":"https://x9un.github.io/2020/07/12/links/"}];
+  var posts = [{"date":"2020-01-25","title":"hgame2020week1_wp","url":"https://x9un.github.io/2020/01/25/hgame2020week1-wp/"},{"date":"2020-02-14","title":"hgame2020week2_wp","url":"https://x9un.github.io/2020/02/14/hgame2020week2-wp/"},{"date":"2020-02-14","title":"hgame2020week3_wp","url":"https://x9un.github.io/2020/02/14/hgame2020week3-wp/"},{"date":"2020-02-18","title":"hgame2020week4_wp","url":"https://x9un.github.io/2020/02/18/hgame2020week4-wp/"},{"date":"2020-04-19","title":"Ha1cyon_CTF","url":"https://x9un.github.io/2020/04/19/Ha1cyon-CTF/"},{"date":"2020-07-12","title":"buuoj-web01","url":"https://x9un.github.io/2020/07/12/buuoj-web01/"},{"date":"2020-07-12","title":"links","url":"https://x9un.github.io/2020/07/12/links/"}];
   var today = moment().format('YYYY-MM-DD');
   var oneYearAgo = moment(today).subtract(1, 'years');
   posts = posts.filter(function(post) {
