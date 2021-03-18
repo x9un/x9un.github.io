@@ -143,7 +143,14 @@ MathJax = {
           
       </div>
       <div class="markdown-body">
-        <p>github : <a href="https://github.com/x9un/todolist" target="_blank" rel="noopener">https://github.com/x9un/todolist</a></p>
+        <ul>
+<li>github : <a href="https://github.com/x9un/todolist" target="_blank" rel="noopener">https://github.com/x9un/todolist</a></li>
+<li>references:</li>
+</ul>
+<ol>
+<li>background animation:<a href="https://codepen.io/JowayYoung/details/GRKrJJX" target="_blank" rel="noopener">https://codepen.io/JowayYoung/details/GRKrJJX</a></li>
+<li><a href="https://github.com/bradtraversy/vanillawebprojects" target="_blank" rel="noopener">vanillaWenProject</a></li>
+</ol>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在抄完github上的vanillaWenProject项目后，准备写个抄后感。</p>
 <h2 id="基本版本"><a href="#基本版本" class="headerlink" title="基本版本"></a>基本版本</h2><p>基本的功能:add + done<br>需要的有  </p>
 <ul>
@@ -193,9 +200,11 @@ MathJax = {
 <p>主要问题是这里的各个 item 本身的金币动画时间和快速点击不同 item 之间时间的冲突，因为 js 本身单线程，它的东西都堆在队列里，然后用 setTimeout() 的话，时间又不一定是真正的时间(虽然可能差不多)<br>然后发现了 .animate() 可以解决问题…  </p>
 <p>进度条的进度靠重新获取 localstorage 的 item ，不知道为啥监听不了。</p>
 <ul>
-<li>背景色变换<br>repeating-linear-gradient + animation css 实现<br>其实这个还有个小问题，但是先放着吧- -</li>
+<li>背景色变换(已删)<br>这里发现这个东西如果作为背景的话需要改动的东西很多，牵扯到视图，不太方便。更适合作为组件的背景图。所以已删除，但是这里的整理继续贴上来。<br>repeating-linear-gradient + animation css 实现  </li>
 </ul>
-<h2 id="想说的话"><a href="#想说的话" class="headerlink" title="想说的话"></a>想说的话</h2><p>应该到这里差不多基本结束了，懒得写了…<br>烦死了烦死了找不到实习了烦死了  </p>
+<p>最重要的一点是，要如何让条纹实现在窗口里展现无限播放的效果，这里指的并不是 infinite ，而是播放的视图的选择与计算。<br>讲一下这里的动画实现<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.gradient</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="built_in">calc</span>(1.4142 * 60px);</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">repeating-linear-gradient</span>(45deg, pink, pink 30px, transparent 0px, transparent 60px, pink 20px) <span class="number">0</span> <span class="number">0</span> border-box;</span><br><span class="line">  <span class="attribute">animation</span>: twill <span class="number">2s</span> linear infinite;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">keyframes</span> twill &#123;</span><br><span class="line">  <span class="selector-tag">to</span> &#123;</span><br><span class="line">    <span class="attribute">background-position-y</span>: <span class="built_in">calc</span>(-1 * 1.4142 * 20vw);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我们的角度是 45° ，这里的 1.412 指代的是根号 2 .</p>
+<h2 id="想说的话"><a href="#想说的话" class="headerlink" title="想说的话"></a>想说的话</h2><p>应该到这里差不多基本结束了,因为这个项目并没有后端，也是一个很小很小的项目，并没有很多其他的功能。所以后续还会再开一个项目。<br>比起一些比较常见的基本功能，也尝试了 css 动画，虽然尝试失败2333，css 动画和 js 控制的动画又有一些不同，不过照收集的信息来看，多数推荐用 css 做动画。其实我用 js 写小游戏都觉得有点烦了…用 css 写动画也是一样的…因为需要很多的坐标和 step 变换。<br>还有一个小问题是，我用 js 绑定的 DOM 有点多，可能会影响到性能，但是作为练手的小 demo 来说，性能影响可以忽略不计。    </p>
 
       </div>
       
